@@ -5,7 +5,7 @@ class Layout {
   static Scaffold getContent(BuildContext context, content) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(150, 150, 150, 1),
+        backgroundColor: Colors.blueGrey,
         title: Center(child: Text('Teaser List')),
       ),
       body: content,

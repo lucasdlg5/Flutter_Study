@@ -17,19 +17,19 @@ class TeaserList extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       title: 'Teaser List',
       theme: ThemeData(
         primaryColorDark: Colors.blueGrey,
-        accentColor: Colors.grey,
+        accentColor: Colors.blueGrey,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72, fontWeight: FontWeight.bold),
           title: TextStyle(fontSize: 36, fontStyle: FontStyle.italic, color: Colors.blueGrey),
           body1: TextStyle(fontSize: 14)
           ),
       ),
-      home: HomePage()
+      home: HomePage(),
+      routes: routes, //Realiza a transição de telas!
     );
   }
   }
