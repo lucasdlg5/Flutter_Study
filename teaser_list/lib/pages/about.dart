@@ -8,7 +8,11 @@ class AboutPage extends StatelessWidget {
     
     return Layout.getContent(context, 
       Center(
-        child: Text('Aplicativo para estudos do Flutter!'),
+        child: 
+        Text('Aplicativo para estudos do Flutter!', 
+        style: TextStyle(color: Layout.dark())
+        
+      )
       )
     );
   }
