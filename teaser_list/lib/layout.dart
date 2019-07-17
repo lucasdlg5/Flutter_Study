@@ -18,6 +18,56 @@ class Layout {
       appBar: AppBar(
         backgroundColor: Layout.primary(),
         title: Center(child: Text('Teaser List')),
+        actions: <Widget>[
+                   
+          
+          GestureDetector(
+            onTap: () {
+              showDialog(
+                context: context,
+                barrierDismissible: true,
+                builder: (BuildContext ctx) {
+
+                  final input = TextFormField(
+                          decoration: InputDecoration(hintText: 'Nome',
+                          contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5)
+                          )
+                        ),
+                      );
+                  return AlertDialog(
+                    title: Text('Nome da sua lista'),
+                    content: SingleChildScrollView(child: ListBody(children: <Widget>[
+                      input,
+                    ],)),
+                    actions: <Widget>[
+                      
+                      RaisedButton(
+                        color: secondary(),
+                        child: Text('Cancelar', style: TextStyle(color: Layout.light())),
+                        onPressed: () {
+                          Navigator.of(ctx).pop();
+                        },
+                      ),
+
+                      RaisedButton(
+                        color: primary(),
+                        child: Text('Adicionar', style: TextStyle(color: Layout.light())),
+                        onPressed: () {
+                          Navigator.of(ctx).pop();
+                        },
+                      )
+                    ],
+                  );
+                }
+
+              );
+            },
+            child: Icon(Icons.add),
+          ),
+        Padding(padding: EdgeInsets.only(right: 20)),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currItem,
