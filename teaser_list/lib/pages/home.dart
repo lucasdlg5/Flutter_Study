@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:teaser_list/widgets/HomeList.dart';
 import '../layout.dart';
 import 'about.dart';
 
@@ -9,19 +9,7 @@ class HomePage extends StatelessWidget{
   
   @override
   Widget build(BuildContext context) {
-    
-    final content = Center(
-      child: Column (
-        children: <Widget>[
-        Text('Hello World'),
-        RaisedButton(
-          child: Text('Sobre'), 
-          onPressed: () { 
-            Navigator.of(context).pushNamed(AboutPage.tag); //Manda para outra tela usando o Routes do main.dart
-        },)
-      ],
-      )
-    );
+    final content = HomeList();
 
     return Layout.getContent(context, content);
   }
