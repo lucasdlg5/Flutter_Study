@@ -10,8 +10,7 @@ void main() => runApp(
             ),
             body: Center(
               child: Image(
-                image: NetworkImage(
-                    'https://www.petlove.com.br/images/breeds/197837/profile/original/shiba-p.jpg?1532540015'),
+                image: AssetImage('images/diamond.png'),
               ),
             )),
       ),
